@@ -31,7 +31,7 @@ az login \
 
 --Deploy file
 
-  New-AzDeployment -LOcation eastus -templatefile ./01-rg.json
+  New-AzDeployment -Location eastus -templatefile ./01-rg.json
 
 --delete app registration
   az ad app delete --id <appid>
