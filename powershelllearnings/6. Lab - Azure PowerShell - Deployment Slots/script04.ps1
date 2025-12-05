@@ -33,3 +33,12 @@ Write-Output "Deployment Slot '$SlotName' deployed successfully. Access it at: h
 
 # Output the URL of the deployed slot
 Write-Output "Deployment Slot URL: https://$AppName-$SlotName.azurewebsites.net"    
+
+#Swap the deployment slot with production
+Swap-AzWebAppSlot -ResourceGroupName $ResourceGroupName -Name $AppName -SourceSlotName $SlotName -DestinationSlotName "production"
+
+Write-Output "Deployment Slot '$SlotName' swapped with production successfully."
+
+# Output the URL of the production slot after swap
+Write-Output "Production Slot URL after swap: https://$AppName.azurewebsites.net"
+
