@@ -35,3 +35,5 @@ az login \
 
 --delete app registration
   az ad app delete --id <appid>
+
+  
